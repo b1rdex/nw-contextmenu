@@ -1,4 +1,4 @@
-$(function(
+$(function() {
   function Menu(cutLabel, copyLabel, pasteLabel) {
     var gui = require('nw.gui')
       , menu = new gui.Menu()
@@ -40,4 +40,4 @@ $(function(
     e.preventDefault();
     menu.popup(e.originalEvent.x, e.originalEvent.y);
   });
-));
+});
