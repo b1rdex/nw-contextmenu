@@ -38,6 +38,6 @@ $(function() {
   var menu = new Menu(/* pass cut, copy, paste labels if you need i18n*/);
   $(document).on("contextmenu", function(e) {
     e.preventDefault();
-    menu.popup(e.originalEvent.x, e.originalEvent.y);
+    menu.popup(e.originalEvent.screenX, e.originalEvent.screenY);
   });
 });
