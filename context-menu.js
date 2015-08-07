@@ -26,6 +26,8 @@
   
   document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
-    menu.popup(e.x, e.y);
+    if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.target.isContentEditable) {
+      menu.popup(e.x, e.y);
+    }
   });
 }());
